@@ -12,6 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: xcode
-      run: sudo xcode-select -s /Applications/Xcode_12_beta.app
+      run: |
+        $(CC) --version
+        sudo xcode-select -switch /Applications/Xcode_12_beta.app
+        $(CC) --version
     - name: make
-      run: make universal_app
+      run: |
+        $(CC) --version
+        make universal_app
