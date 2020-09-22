@@ -1,6 +1,6 @@
 x86_app: main.c
 	$(CC) --version
-	sudo xcode-select -switch /Applications/Xcode_12_beta.app
+	sudo xcode-select -switch /Applications/Xcode_12.2_beta.app
 	$(CC) --version
 	$(CC) main.c -o x86_app -target x86_64-apple-macos10.12
 arm_app: main.c
